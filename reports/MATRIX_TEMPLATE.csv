@@ -1,0 +1,43 @@
+Компонент;Вариант;Состояние;Тема;Ширина_px;Ожидаемое поведение;Факт_до;Факт_после;Статус_OK_FAIL;Доказательство
+button;primary;default;light;1440;accent background from token;text broken;token bg;OK;DevTools computed
+button;primary;focus-visible;dark;375;orange outline 3px;no outline;outline visible;OK;Tab key
+button;danger;hover;light;768;brightness 1.08;dark bg;brightness applied;OK;DevTools computed
+button;secondary;disabled;dark;320;opacity 0.45, cursor not-allowed;opacity 0.45;opacity 0.45;OK;DevTools computed
+button;ghost;active;light;1024;transform translateY(0);transform applied;transform applied;OK;Click
+button;primary;default;dark;1920;dark theme accent;light accent;dark accent;OK;Theme toggle
+button;secondary;focus-visible;light;375;orange outline 3px;no outline;outline visible;OK;Tab key
+button;danger;default;dark;768;danger bg/ink tokens;hex fallback;token bg;OK;DevTools computed
+field;email;untouched-invalid;light;1440;no error style before blur;red border immediately;no error;OK;Page load
+field;email;invalid-after-blur;dark;375;red border + hint after blur;red border;red border + hint;OK;Blur event
+field;text;valid;light;1024;normal border;normal border;normal border;OK;Input event
+field;text;focus;dark;320;orange outline on input;no outline;outline visible;OK;Tab key
+card;default;long-text;light;320;wrap text, no horizontal scroll;horizontal scroll;no scroll;OK;e2e viewport 320
+card;featured;default;dark;1440;accent border;color fallback;accent border;OK;DevTools computed
+card;default;nested-alert;light;375;alert text keeps its color;alert text turns gray;alert text green;OK;DevTools computed
+card;default;default;dark;768;shadow and radius applied;broken radius;radius applied;OK;Visual check
+tag;neutral;static;light;375;subtle bg, no interaction;button-like padding;subtle bg;OK;Visual check
+tag;success;static;dark;1024;success bg/ink tokens;hex fallback;token bg;OK;DevTools computed
+tag;warning;static;light;320;warning bg/ink tokens;hex fallback;token bg;OK;DevTools computed
+tag;danger;static;dark;1440;danger bg/ink, not a button;button-like;danger bg, small;OK;Visual check
+alert;info;default;light;375;info bg, border, readable text;hex fallback;token bg;OK;DevTools computed
+alert;success;dismissed;dark;768;removed from DOM;removed;removed;OK;Click dismiss
+alert;warning;default;light;1024;warning bg, border;hex fallback;token bg;OK;DevTools computed
+alert;danger;default;dark;320;danger bg, border, role=alert;hex fallback;token bg;OK;DevTools computed
+alert;info;restored;light;1440;4 alerts present after restore;3 alerts;4 alerts;OK;Click restore
+switch;enabled;keyboard-space;light;375;Space toggles state, visible focus;focus clipped;focus visible;OK;Tab + Space
+switch;disabled;tab-skip;dark;375;skipped in Tab order, opacity 0.4;skipped;skipped;OK;Tab key
+switch;enabled;checked;light;1024;thumb translated, track accent;thumb translated;thumb translated;OK;Visual check
+switch;enabled;unchecked;dark;1440;thumb left, track off-color;thumb left;thumb left;OK;Visual check
+dialog;open;modal-focus;light;1024;:modal=true, background inert;:modal=false;:modal=true;OK;e2e :modal
+dialog;closed;escape-focus-return;dark;375;focus returns to trigger;focus lost;focus on trigger;OK;e2e Escape
+dialog;open;tab-trap;light;768;focus cycles inside dialog;focus escapes;focus trapped;OK;Tab key
+dialog;closed;default;dark;1440;hidden, display none;hidden;hidden;OK;Visual check
+legacy;widget;default;light;1440;isolated, no effect on .ui-button;affected .ui-button;isolated;OK;Visual check
+legacy;widget;default;dark;375;isolated, keeps its own fonts;affected fonts;isolated;OK;Visual check
+utility;visually-hidden;default;light;1440;clip rect, 1x1px, no layout impact;layout impact;no impact;OK;DevTools layout
+utility;full-width-btn;mobile;dark;320;100% width on small screens;auto width;100% width;OK;DevTools computed
+base;typography;default;light;1440;system-ui font applied;'Segoe U I' broken;system-ui;OK;DevTools computed
+base;layout;sidebar;dark;768;sidebar stacks above content;sidebar overlaps;sidebar stacks;OK;e2e viewport 768
+base;layout;grid;light;320;1fr columns, no overflow;fixed width overflow;1fr columns;OK;e2e viewport 320
+states;reduced-motion;hover;light;1440;no transition animation;animation plays;no animation;OK;DevTools Rendering
+states;focus-visible;mouse-click;dark;768;no outline on mouse click;outline appears;no outline;OK;Mouse click

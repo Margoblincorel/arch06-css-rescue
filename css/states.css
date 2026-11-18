@@ -1,0 +1,22 @@
+.ui-button:hover { transform: translateY(-1px); }
+.ui-button--primary:hover { background: var(--color-accent-hover); }
+.ui-button--secondary:hover, .ui-button--ghost:hover { background: var(--color-surface-alt); }
+.ui-button--danger:hover { filter: brightness(1.08); }
+
+.ui-button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.ui-switch input:focus-visible + .ui-switch__track { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+
+.ui-button:active { transform: translateY(0); }
+.ui-button:disabled { opacity: .45; cursor: not-allowed; }
+
+.ui-field:has(input[aria-invalid='true']) input,
+.ui-field:has(textarea[aria-invalid='true']) textarea {
+  border-color: var(--color-danger); background: var(--color-danger-bg);
+}
+.ui-field:has(input[aria-invalid='true']) .ui-field__hint { color: var(--color-danger); }
+
+.ui-alert { transition: background-color 240ms, color 240ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms; animation-duration: .01ms; }
+}
